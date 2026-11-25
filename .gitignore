@@ -1,0 +1,16 @@
+# 密钥：任何情况下都不要提交
+key.txt
+.dev.vars
+*.env
+!deploy/*.env.example
+
+# 本地产物
+.tmp/
+node_modules/
+.wrangler/
+*.log
+.DS_Store
+Thumbs.db
+
+# 本地私有文档
+*.local.md

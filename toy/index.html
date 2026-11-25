@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>布吉岛战绩查询</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAATklEQVR42mOUk5NnIAWwMDAw+C1SJVL1prjbTAwkAtprYGFgYJCc+RrOf/b2J4QhJcyOKUgXJ41IDSwMDAwXH3/FlHj97Q91bGAkNXkDAGqsEMoLC4t1AAAAAElFTkSuQmCC">
+  <script src="//s1.hdslb.com/bfs/seed/toy/app/sdk/toy-sdk.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage" class="stage">
+    <header class="hero">
+      <div class="hero-sky"></div>
+      <div class="hero-inner">
+        <span class="kicker"><i class="dot"></i>BUGLAND · STATS</span>
+        <h1 class="hero-title">布吉岛<span>战绩查询</span></h1>
+        <p class="hero-lead">输入游戏昵称，查看等阶、各模式战绩、对局记录、排行榜与公会。</p>
+      </div>
+      <div class="grass"></div>
+    </header>
+
+    <main class="container">
+      <section id="gate" class="panel state gate" aria-labelledby="gate-title" aria-live="polite">
+        <div class="loader" aria-hidden="true"></div>
+        <h2 id="gate-title">正在检测关注状态</h2>
+      </section>
+
+      <form id="search" class="panel search" autocomplete="off" hidden>
+        <label class="field">
+          <span class="sr-only">玩家昵称</span>
+          <input id="q" name="q" type="search" maxlength="32" placeholder="输入布吉岛玩家昵称" enterkeyhint="search">
+        </label>
+        <button class="btn btn-primary" type="submit">查询</button>
+      </form>
+      <div id="quota" class="panel dark quota" hidden>
+        <div>
+          <p id="quota-tier" role="status"></p>
+          <p id="quota-remaining" class="quota-remaining"></p>
+        </div>
+        <button id="quota-recheck" class="btn btn-sm" type="button" data-action="recheck-tier" hidden>我已三连，重新检测</button>
+      </div>
+      <div id="quick" class="quick"></div>
+
+      <section id="result" class="result" hidden>
+        <div id="profile" class="panel profile"></div>
+        <nav id="tabs" class="tabs" role="tablist"></nav>
+        <div id="tabpanel" class="tabpanel" role="tabpanel"></div>
+      </section>
+
+      <section id="empty" class="panel empty" hidden>
+        <div class="empty-block"></div>
+        <p>搜索一位玩家开始吧</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>数据来源：布吉岛开放接口 · 仅用于战绩查询</p>
+      <p>开源地址：<button class="link footer-link" type="button" data-action="copy-repo" data-url="https://github.com/mc-dreamland/bugland-stats-toy" title="点击复制">bugland-stats-toy</button>（AGPL-3.0）</p>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-mask" data-action="close-modal"></div>
+    <div class="modal-box panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <h2 id="modal-title"></h2>
+        <button class="btn btn-icon" type="button" data-action="close-modal" aria-label="关闭">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

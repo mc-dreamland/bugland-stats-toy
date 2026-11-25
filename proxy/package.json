@@ -1,0 +1,8 @@
+{
+  "name": "bjd-toy-proxy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node node-server.mjs"
+  }
+}

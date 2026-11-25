@@ -1,0 +1,28 @@
+[Unit]
+Description=BuGLand Toy API proxy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/bjd-proxy
+EnvironmentFile=/etc/bjd-proxy/env
+ExecStart=/usr/bin/node node-server.mjs
+Restart=on-failure
+RestartSec=3
+
+# 以临时低权限用户运行，只读文件系统
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target

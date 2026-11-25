@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-only -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>布吉岛战绩查询 · 图标</title>
+  <link rel="stylesheet" href="ore.css">
+  <style>svg { display: block; width: 100vw; height: 100vh; }</style>
+</head>
+<body>
+  <svg viewBox="0 0 64 64" shape-rendering="crispEdges" role="img" aria-labelledby="icon-title">
+    <title id="icon-title">像素草方块与金色战绩放大镜</title>
+    <defs>
+      <pattern id="grid" width="4" height="4" patternUnits="userSpaceOnUse">
+        <path fill="#fff" fill-opacity=".035" d="M0 0h4v.125H.125V4H0z"/>
+      </pattern>
+      <linearGradient id="field" x2="0" y2="1" gradientUnits="objectBoundingBox">
+        <stop stop-color="#24372c"/>
+        <stop offset="1" stop-color="#12171a"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Full-bleed Ore tile, with a recessed grid field. -->
+    <path fill="#1e1e1f" d="M0 0h64v64H0z"/>
+    <path fill="#48494a" d="M1 1h62v62H1z"/>
+    <path fill="#6d6d6e" d="M1 1h62v1H2v61H1z"/>
+    <path fill="#303232" d="M62 2h1v61H2v-1h60z"/>
+    <path fill="#171b19" d="M3 3h58v58H3z"/>
+    <path fill="url(#field)" d="M4 4h56v56H4z"/>
+    <path fill="url(#grid)" d="M4 4h56v56H4z"/>
+    <path fill="#38483e" d="M5 5h5v1H6v4H5zm49 0h5v5h-1V6h-4zM5 54h1v4h4v1H5z"/>
+    <path fill="#54794c" d="M45 11h2v2h-2zm5 7h2v2h-2zM10 47h2v2h-2z"/>
+    <path fill="#736739" d="M49 9h2v2h2v2h-2v2h-2v-2h-2v-2h2z"/>
+
+    <!-- Stepped voxel silhouette, then dirt faces and grass cap. -->
+    <path fill="#0e1510" d="M24 10h6v2h4v2h4v2h4v2h4v24h-4v2h-4v2h-4v2h-4v2h-6v-2h-4v-2h-4v-2h-4v-2H8V18h4v-2h4v-2h4v-2h4z"/>
+    <path fill="#956039" d="M10 22h4v2h4v2h4v2h4v20h-2v-2h-4v-2h-4v-2h-4v-2h-2z"/>
+    <path fill="#774b2b" d="M44 22h-4v2h-4v2h-4v2h-4v20h2v-2h4v-2h4v-2h4v-2h2z"/>
+    <path fill="#c1834e" d="M12 31h4v3h-4zm7 6h4v3h-4zm1 5h4v2h-4z"/>
+    <path fill="#694528" d="M14 37h4v3h-4zm8-6h4v4h-4z"/>
+    <path fill="#99603a" d="M38 29h4v3h-4zm-6 8h4v3h-4z"/>
+    <path fill="#64b941" d="M10 20h4v2h4v2h4v2h4v8h-4v-3h-4v2h-4v-3h-4z"/>
+    <path fill="#3b852e" d="M44 20h-4v2h-4v2h-4v2h-4v8h4v-3h4v2h4v-3h4z"/>
+    <path fill="#a1e363" d="M24 12h6v2h4v2h4v2h4v2h-4v2h-4v2h-4v2h-6v-2h-4v-2h-4v-2h-4v-2h4v-2h4v-2h4z"/>
+    <path fill="#c6f38a" d="M24 12h6v2h-6zm-4 2h4v2h-4zm-4 2h4v2h-4z"/>
+    <path fill="#82ca52" d="M31 16h3v2h-3zm-9 3h5v2h-5zm12 1h4v2h-4zm-10 4h6v2h-6z"/>
+    <path fill="#7ad357" d="M10 20h2v8h-2zm12 7h4v2h-4z"/>
+    <path fill="#afe376" d="M26 27h2v20h-2z" opacity=".22"/>
+
+    <!-- Magnifier with a bar chart in the lens. -->
+    <g transform="translate(-1 -1)">
+      <path fill="#101611" d="M35 23h12v2h4v4h3v13h-2v3h3v3h3v8h-2v2h-8v-3h-3v-3h-3v-3H32v-3h-4v-4h-2V30h3v-4h6z"/>
+      <path fill="#a76424" d="M45 43h5v3h3v3h3v6h-2v1h-5v-3h-3v-3h-3v-5z"/>
+      <path fill="#ffcb3d" d="M46 43h4v3h3v3h3v4h-4v-3h-3v-3h-3z"/>
+      <path fill="#f4ead2" d="M35 25h12v2h3v4h2v11h-3v4h-4v2H34v-2h-4v-4h-2V31h3v-4h4z"/>
+      <path fill="#cba14c" d="M48 30h2v1h2v11h-3v4h-4v2H34v-2h-4v-3h5v2h9v-2h4v-3h2v-8h-2z"/>
+      <path fill="#263a30" d="M36 29h9v2h3v3h1v7h-3v3H35v-2h-3v-4h-1v-5h2v-2h3z"/>
+      <path fill="#385640" d="M33 32h3v-2h3v2h-3v2h-3z"/>
+      <path fill="#72d64f" d="M34 38h3v3h-3zm4-3h3v6h-3z"/>
+      <path fill="#b5eb76" d="M42 32h3v9h-3z"/>
+    </g>
+  </svg>
+</body>
+</html>

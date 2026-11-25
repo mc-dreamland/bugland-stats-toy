@@ -1,0 +1,13 @@
+{
+  "name": "bjd-stats-toy",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "proxy": "node proxy/node-server.mjs"
+  }
+}

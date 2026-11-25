@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: AGPL-3.0-only */
+:root {
+  color-scheme: dark;
+  --bg: #0a0c0f;
+  --text: #eef2ec;
+  --muted: #bac4ba;
+  --grass: #72d64f;
+  --gold: #ffcb3d;
+  --ore-ink: #1e1e1f;
+  --ore-panel: #313233;
+  --ore-panel-raised: #48494a;
+  --ore-highlight: #6d6d6e;
+  --ore-green: #3c8527;
+  --ore-green-highlight: #639d52;
+  --ore-green-shadow: #1d4d13;
+  font-family: "HarmonyOS Sans SC", "MiSans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); }
